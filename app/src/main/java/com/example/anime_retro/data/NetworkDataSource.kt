@@ -1,15 +1,16 @@
-package com.example.anime_retro.data.remote
+package com.example.anime_retro.data
 
-import com.example.anime_retro.data.remote.models.AnimeResponse
+import com.example.anime_retro.data.remote.AnimeAPI
+import com.example.anime_retro.data.remote.models.NewQuotesResponse
 import javax.inject.Inject
 
 class NetworkDataSource @Inject constructor(
     private val api: AnimeAPI
 ) {
 
-    suspend fun getAllAnime(): AnimeResponse? {
+    suspend fun getAllQuotes(): NewQuotesResponse? {
         return try {
-            val response = api.getAllAnime()
+            val response = api.getAllQuotes()
             if (response.isSuccessful) {
                 response.body()
             } else

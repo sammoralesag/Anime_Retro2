@@ -19,7 +19,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "API_BASE_URL", "\"https://animechan.vercel.app/api/\""
+        buildConfigField "String", "API_BASE_URL", "\"https://api.quotable.io/search/\""
 
     }
 

@@ -1,7 +1,7 @@
 package com.example.anime_retro.di
 
 import com.example.anime_retro.data.remote.AnimeRepositoryImpl
-import com.example.anime_retro.data.remote.NetworkDataSource
+import com.example.anime_retro.data.NetworkDataSource
 import com.example.anime_retro.domain.IAnimeRepository
 import dagger.Module
 import dagger.Provides
