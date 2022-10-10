@@ -19,7 +19,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "API_BASE_URL", "\"https://api.quotable.io/search/\""
+        buildConfigField "String", "API_BASE_URL_2", "\"https://api.quotable.io/search/\""
+        buildConfigField "String", "API_BASE_URL_1", "\"https://animechan.vercel.app/api/\""
+        buildConfigField "String", "API_BASE_URL_3", "\"https://goquotes-api.herokuapp.com/api/v1/\""
 
     }
 

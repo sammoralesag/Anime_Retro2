@@ -8,29 +8,29 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.anime_retro.R
 import com.example.anime_retro.databinding.ItemAnimeBinding
-import com.example.anime_retro.domain.models.Anime
+import com.example.anime_retro.domain.models.Quotes
 
 class AnimeAdapter(val context: Context?)
-    : ListAdapter<Anime, AnimeAdapter.AnimeViewHolder>(AnimeDiff()) {
+    : ListAdapter<Quotes, AnimeAdapter.AnimeViewHolder>(AnimeDiff()) {
 
 
     inner class AnimeViewHolder(private val itemBinding: ItemAnimeBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
-        fun bind(anime: Anime) {
+        fun bind(anime: Quotes) {
             with(itemBinding) {
-                tvAnime.text = context?.getString(R.string.anime,anime.anime)
-                tvCharacter.text = context?.getString(R.string.character,anime.character)
+                tvAnime.text = context?.getString(R.string.anime,anime.id)
+                tvCharacter.text = context?.getString(R.string.character,anime.author)
                 tvQuote.text = context?.getString(R.string.quote, anime.quote)
             }
         }
     }
 
-    class AnimeDiff : DiffUtil.ItemCallback<Anime>() {
-        override fun areItemsTheSame(oldItem: Anime, newItem: Anime): Boolean {
-            return oldItem.anime == newItem.anime
+    class AnimeDiff : DiffUtil.ItemCallback<Quotes>() {
+        override fun areItemsTheSame(oldItem: Quotes, newItem: Quotes): Boolean {
+            return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: Anime, newItem: Anime): Boolean {
+        override fun areContentsTheSame(oldItem: Quotes, newItem: Quotes): Boolean {
             return oldItem == newItem
         }
 

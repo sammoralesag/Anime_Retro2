@@ -4,20 +4,22 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.anime_retro.domain.IAnimeRepository
-import com.example.anime_retro.domain.models.Anime
+import com.example.anime_retro.domain.IQuotesRepository
+import com.example.anime_retro.domain.models.Quotes
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import javax.inject.Named
 
 @HiltViewModel
 class AnimeViewModel @Inject constructor(
-    private val repository: IAnimeRepository
+    @Named("QuotesMovie")
+    private val repository: IQuotesRepository
 ) : ViewModel() {
 
-    private val _anime = MutableLiveData<List<Anime>>()
-    val anime: LiveData<List<Anime>>
+    private val _anime = MutableLiveData<List<Quotes>>()
+    val anime: LiveData<List<Quotes>>
         get() = _anime
 
     init {
@@ -26,7 +28,7 @@ class AnimeViewModel @Inject constructor(
 
     fun refreshAnime(){
         viewModelScope.launch (Dispatchers.IO ){
-            val list = repository.getAllAnime()
+            val list = repository.getAllQuotes()
             _anime.postValue(list)
         }
     }

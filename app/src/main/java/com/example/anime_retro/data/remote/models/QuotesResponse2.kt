@@ -3,7 +3,7 @@ package com.example.anime_retro.data.remote.models
 
 import com.google.gson.annotations.SerializedName
 
-data class NewQuotesResponse(
+data class QuotesResponse2(
     @SerializedName("count")
     val count: Int?,
     @SerializedName("lastItemIndex")
