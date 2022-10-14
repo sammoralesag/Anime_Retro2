@@ -3,4 +3,7 @@
     <string name="anime">Id: %s</string>
     <string name="character">Author: %s</string>
     <string name="quote">Quote: %s</string>
+    <string name="anime_quotes">Anime Quotes</string>
+    <string name="tech_quotes">Tech Quotes</string>
+    <string name="movie_quotes">Movie Quotes</string>
 </resources>

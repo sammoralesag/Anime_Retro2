@@ -1,4 +1,4 @@
-package com.example.anime_retro.ui.anime
+package com.example.anime_retro.ui.quotes
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -10,8 +10,8 @@ import com.example.anime_retro.R
 import com.example.anime_retro.databinding.ItemAnimeBinding
 import com.example.anime_retro.domain.models.Quotes
 
-class AnimeAdapter(val context: Context?)
-    : ListAdapter<Quotes, AnimeAdapter.AnimeViewHolder>(AnimeDiff()) {
+class QuotesAdapter(val context: Context?)
+    : ListAdapter<Quotes, QuotesAdapter.AnimeViewHolder>(AnimeDiff()) {
 
 
     inner class AnimeViewHolder(private val itemBinding: ItemAnimeBinding) :

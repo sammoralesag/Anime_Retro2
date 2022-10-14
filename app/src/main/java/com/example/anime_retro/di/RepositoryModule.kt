@@ -27,7 +27,7 @@ object RepositoryModule {
     @Provides
     @Singleton
     @Named("QuotesTech")
-    fun providesITechRepository(dataSource: NetworkDataSource2): IQuotesRepository =
+    fun  providesITechRepository(dataSource: NetworkDataSource2): IQuotesRepository =
         QuotesRepositoryImpl2(dataSource)
 
     @Provides
